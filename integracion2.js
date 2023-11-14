@@ -127,10 +127,6 @@ aumentador(productos, "computacion", 1.50)
 console.log( productos )
 
 
-// 1 ---> suele ser de funciones 
-// 2 ---> condicionales
-// 3 ---> arreglos y objetos
-
 
 let numeros = [ 12, 4, 22, 16, 3, 11 ]
 // saber el menor
@@ -174,3 +170,9 @@ const encontrarMayor = ( arreglo )=>{
 const elMayor = encontrarMayor(numeros2)
 console.log(elMenor)
 console.log(elMayor)
+
+
+
+// 1 ---> suele ser de funciones 
+// 2 ---> condicionales
+// 3 ---> arreglos y objetos
