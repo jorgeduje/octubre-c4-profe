@@ -159,3 +159,68 @@ const totalSemanal = ( gastos, numSemana )=>{
 
 let totalSemanaTres = totalSemanal( febrero, 3 )
 console.log( totalSemanaTres )
+
+//TODO
+// CREANDO UNA FUNCION REUTILIZABLE...
+// QUEREMOS SABER EL TOTAL DE LO QUE SE GASTO SUMANDO TOD´OS LOS DIAS SABADOS
+// ¿COMO LO HARIAS?
+
+let febreroo = [
+    // EMPEZAREMOS A CONTAR LOS DIAS DESDE EL DIA LUNES
+    // EL MES ES FEBRERO QUE TIENE 28 DIAS
+    [1135, 2500, 900, 1600, 2800, 3650, 1100], // semana 1
+    [1750, 1890, 1900, 1300, 898, 1750, 2800], // semana 2
+    [1700, 1150, 1690, 1900, 1770, 4500, 2560], // semana 3
+    [800, 1250, 1430, 2100, 1980, 1270, 950], // semana 4
+];
+
+const totalDia = (gastos, numDia )=>{
+    let posicion = numDia - 1
+    let acc = 0
+
+    for(let i = 0 ; i < gastos.length; i++){
+        acc += gastos[i][posicion]
+    }
+
+    return acc
+
+}
+
+let totalSabados = totalDia(febreroo, 6)
+console.log(totalSabados)
+
+
+//TODO
+// CALCULAR EL TOTAL GASTADO DEL MES
+
+let febrerooo = [
+    // EMPEZAREMOS A CONTAR LOS DIAS DESDE EL DIA LUNES
+    // EL MES ES FEBRERO QUE TIENE 28 DIAS
+    [1135, 2500, 900, 1600, 2800, 3650, 1100], // semana 1
+    [1750, 1890, 1900, 1300, 898, 1750, 2800], // semana 2
+    [1700, 1150, 1690, 1900, 1770, 4500, 2560], // semana 3
+    [800, 1250, 1430, 2100, 1980, 1270, 950], // semana 4
+];
+
+const totalMensual = ( gastos )=>{
+
+    let acc = 0
+
+    for(let i = 0 ; i < gastos.length; i++){
+
+        for(let j = 0; j < gastos[i].length ; j++){
+           acc += gastos[i][j]
+        }
+
+    }
+
+    return acc
+
+}
+
+let totalFebrero = totalMensual(febrerooo)
+console.log(totalFebrero)
+
+// TODO
+// EN EL DIA QUE MAS SE GASTO, CUANTO FUE ?
+// EN QUE DIA Y SEMANA , SE PRODUJO ESE GASTO?
