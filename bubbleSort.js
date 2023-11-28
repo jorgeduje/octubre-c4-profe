@@ -71,3 +71,7 @@ let arrayCuentas = [
   bubbleSort( arrayCuentas)
   console.log(arrayCuentas)
 
+// 1 previo al parcial
+// 2 bubble sort
+// 3 a matrices un solo for
+// 3 b matrices doble for
